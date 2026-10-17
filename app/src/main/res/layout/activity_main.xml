@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#0A0E1A">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="InfOptimizer"
+            android:textColor="#00E5FF"
+            android:textSize="26sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="Shizuku: проверка..."
+            android:textColor="#7EE787"
+            android:fontFamily="monospace"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tvTelemetry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="—"
+            android:textColor="#C9D1D9"
+            android:fontFamily="monospace"
+            android:textSize="13sp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnShizuku"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="Запросить разрешение Shizuku"
+            app:backgroundTint="#00E5FF"
+            android:textColor="#0A0E1A"
+            app:cornerRadius="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCompile"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="AOT-компиляция всех приложений (speed)"
+            app:backgroundTint="#111827"
+            android:textColor="#00E5FF"
+            app:strokeColor="#00E5FF"
+            app:strokeWidth="1dp"
+            app:cornerRadius="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnTrim"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="Очистить кэш приложений"
+            app:backgroundTint="#111827"
+            android:textColor="#00E5FF"
+            app:strokeColor="#00E5FF"
+            app:strokeWidth="1dp"
+            app:cornerRadius="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnKill"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="Убить фоновые процессы"
+            app:backgroundTint="#111827"
+            android:textColor="#00E5FF"
+            app:strokeColor="#00E5FF"
+            app:strokeWidth="1dp"
+            app:cornerRadius="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnAnim"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="Отключить анимации (0x)"
+            app:backgroundTint="#111827"
+            android:textColor="#00E5FF"
+            app:strokeColor="#00E5FF"
+            app:strokeWidth="1dp"
+            app:cornerRadius="12dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnLimit"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="Ограничить фоновые (2 процесса)"
+            app:backgroundTint="#111827"
+            android:textColor="#00E5FF"
+            app:strokeColor="#00E5FF"
+            app:strokeWidth="1dp"
+            app:cornerRadius="12dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            app:cardBackgroundColor="#0D1117"
+            app:cardCornerRadius="12dp"
+            app:cardElevation="0dp"
+            app:strokeColor="#1F2937"
+            app:strokeWidth="1dp">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:padding="12dp">
+
+                <TextView
+                    android:id="@+id/tvLog"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="monospace"
+                    android:textColor="#7EE787"
+                    android:textSize="12sp"
+                    android:text="Лог пуст."/>
+            </ScrollView>
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+</ScrollView>
